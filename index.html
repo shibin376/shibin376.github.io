@@ -22,7 +22,25 @@ var _hmt = _hmt || [];
 
 </head>
 <body>
-		<div class="container">
+	<script type="text/javascript" src="assets/three.min.js"></script>
+		<script type="text/javascript" src="assets/Detector.js"></script>
+		<script id="vs" type="x-shader/x-vertex">
+			varying vec2 vUv;
+			void main() {
+				vUv = uv;
+				gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+			}
+		</script>
+
+		<script id="fs" type="x-shader/x-fragment">
+			uniform sampler2D map;
+			uniform vec3 fogColor;
+			uniform float fogNear;
+			uniform float fogFar;
+			varying vec2 vUv;
+			void main() {
+			
+			<div class="container">
 		<div class="row">
 			<div class="col-xs-4 col-md-4">
 				<a href="https://shibin376.github.io" class="thumbnail">
@@ -77,25 +95,6 @@ var _hmt = _hmt || [];
 	</div>
 	
 	
-	
-	
-	<script type="text/javascript" src="assets/three.min.js"></script>
-		<script type="text/javascript" src="assets/Detector.js"></script>
-		<script id="vs" type="x-shader/x-vertex">
-			varying vec2 vUv;
-			void main() {
-				vUv = uv;
-				gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
-			}
-		</script>
-
-		<script id="fs" type="x-shader/x-fragment">
-			uniform sampler2D map;
-			uniform vec3 fogColor;
-			uniform float fogNear;
-			uniform float fogFar;
-			varying vec2 vUv;
-			void main() {
 				float depth = gl_FragCoord.z / gl_FragCoord.w;
 				float fogFactor = smoothstep( fogNear, fogFar, depth );
 				gl_FragColor = texture2D( map, vUv );
