@@ -219,7 +219,7 @@ function createInstructions() {
 
 	text = document.createElement( 'div' );
 	text.onSelectStart = null;
-	text.innerHTML = '<span style="color:' + theme[0] + ';font-size:26px;">玩法介绍：</span><br /><span style="font-size:15px;"><br />你站在桥上看风景<br />看风景的人在楼上看你<br />明月装饰了你的窗子<br />你装饰了别人的梦</span>';
+	text.innerHTML = '<span style="color:' + theme[0] + ';font-size:26px;"></span><br /><span style="font-size:15px;"><br />你站在桥上看风景<br />看风景的人在楼上看你<br />明月装饰了你的窗子<br />你装饰了别人的梦</span>';
 	text.style.color = theme[1];
 	text.style.position = 'absolute';
 	text.style.left = '0px';
