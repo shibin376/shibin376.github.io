@@ -223,7 +223,7 @@ function createInstructions() {
 	innerHTML[2] = '<span style="color:' + theme[0] + ';font-size:26px;"></span><br /><span style="font-size:20px;"><br />bbb<br />aaa<br />aaa<br />aaa</span>';
 	innerHTML[3] = '<span style="color:' + theme[0] + ';font-size:26px;"></span><br /><span style="font-size:20px;"><br />ccc<br />aaa<br />aaa<br />aaa</span>';
 	innerHTML[4] = '<span style="color:' + theme[0] + ';font-size:26px;"></span><br /><span style="font-size:20px;"><br />你站在桥上看风景<br />看风景的人在楼上看你<br />明月装饰了你的窗子<br />你装饰了别人的梦</span>';
-	text.innerHTML = innerHTML[Math.ceil()Math.random()*3];
+	text.innerHTML = innerHTML[Math.ceil(Math.random()*3)];
 	text.style.color = theme[1];
 	text.style.position = 'absolute';
 	text.style.left = '0px';
