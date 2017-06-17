@@ -229,7 +229,7 @@ function createInstructions() {
 	element.appendChild(text);
 
 	text.style.left = ((250 - text.clientWidth) / 2) +'px';
-	text.style.top = ((50 - text.clientHeight) / 2) +'px';	
+	text.style.top = ((150 - text.clientHeight) / 2) +'px';	
 
 	var b2body = new b2BodyDef();
 
